@@ -7,23 +7,32 @@ Additionally ***reviews*** can be added to each product and products can be ***s
 The endpoints and request structures are as given below.
 To perform CRUD operations on products
 ```/api/products/``` can be used
+#### Create
+
 The structure for post to create product is
 ``` {
   "name":"product_name",
   "price":"price",
   "description":"description"
  ```
+ 
+ #### Retrieve
  ```GET``` request to the said endpoint lists all the products.
- ```/api/products/<id>/``` where id is the <id> of a product gives one product.
-  
- To edit a product a patch request with the same body as the post request along with the product is used.
- for eg. To edit a product with id, 1.
+ ```/api/products/<id>/``` where id is the <id> of a product returns one product.
+ 
+  #### Update
+ To edit a product a ```PATCH``` request with the same body as the post request along with the product id is used.
+ for eg. To edit a product with id, 1. A ```PATCH``` request is sent to ```/api/products/1``` with body
   ```
     "id":1,
     "name":"Brush",
     "price":34,
     "description":"description"
   ```
+  
+  #### Delete
+  To delete a product a ```DELETE``` request to ```/api/products/<id>``` is used where <id> is replaced by the id of the product to be deleted.
+  
   ### Product Review
   The endpoint to post reviews for a product is ```/api/product_review```
   The structure of the request body should be
