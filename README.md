@@ -18,7 +18,7 @@ The structure for post to create product is
  
  #### Retrieve
  ```GET``` request to the said endpoint lists all the products.
- ```/api/products/<id>/``` where id is the ```<id>``` of a product returns one product.
+ ```/api/products/<id>/``` where ```<id>``` is the id of a product returns one product.
  
   #### Update
  To edit a product a ```PATCH``` request with the same body as the post request along with the product id is used.
@@ -31,7 +31,7 @@ The structure for post to create product is
   ```
   
   #### Delete
-  To delete a product a ```DELETE``` request to ```/api/products/<id>``` is used where <id> is replaced by the id of the product to be deleted.
+  To delete a product a ```DELETE``` request to ```/api/products/<id>``` is used where ```<id>``` is replaced by the id of the product to be deleted.
   
   ### Product Review
   The endpoint to post reviews for a product is ```/api/product_review```
