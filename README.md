@@ -9,16 +9,16 @@ To perform CRUD operations on products
 ```/api/products/``` can be used
 #### Create
 
-The structure for post to create product is
+The body of ```POST``` to create product is
 ``` {
   "name":"product_name",
   "price":"price",
   "description":"description"
  ```
  
- #### Retrieve
- ```GET``` request to the said endpoint lists all the products.
- ```/api/products/<id>/``` where ```<id>``` is the id of a product returns one product.
+#### Retrieve
+```GET``` request to the said endpoint lists all the products.
+```/api/products/<id>/``` where ```<id>``` is the id of a product returns one product.
  
   #### Update
  To edit a product a ```PATCH``` request with the same body as the post request along with the product id is used.
