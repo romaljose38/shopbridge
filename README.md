@@ -50,5 +50,14 @@ The structure for post to create product is
   The tests are located in ```shopbridge/admin_api/tests.py```
   
   
+ ### Instructions to run the server
+  A lightweight ```sqllite``` database is used for the project. Integration with other databases is also seamless.
+  After installing the required modules mentioned in the `requirements.txt`
+  The server can be started using 
+  ```python manage.py runserver```
+  Also to run tests
+  ```python manage.py test```
+  
+  
   
   
