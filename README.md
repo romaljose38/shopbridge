@@ -24,4 +24,31 @@ The structure for post to create product is
     "price":34,
     "description":"description"
   ```
+  ### Product Review
+  The endpoint to post reviews for a product is ```/api/product_review```
+  The structure of the request body should be
+  ```
+    "product":"the id of the product reviewing",
+    "author":"authors name",
+    "review": "review"
+  ```
+  A ```GET``` request to the said endpoint with product id as a parameter can be used to get all the reviews of that product
+  For eg. a ```GET``` request to ```/api/product_review?id=1``` gives all the reviews of the product having id, 1.
+  
+  ### Product Detail
+  The endpoint to get detailed view of a product is ```/api/product_detail/<product_id>``` where ```<product_id>``` is the id of the required product.
+  It returns basic details of the product along with its reviews.
+  
+  ### Product Search
+  To search among products a ```GET``` request to ```/api/product_search``` can be used.
+  For eg. To get all products having "br" in their product name
+  We would send a ```GET``` request to ```/api/product_search?name=br```.
+  
+  ### Code Coverage
+  Tests are written using the unittest module from the Python Standard Library.
+  All the endpoints are checked necessarily.
+  The tests are located in ```shopbridge/admin_api/tests.py```
+  
+  
+  
   
